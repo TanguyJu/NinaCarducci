@@ -126,37 +126,44 @@
           activeImage = $(this);
         }
       });
-      let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
-      let imagesCollection = [];
-      if (activeTag === "all") {
-        $(".item-column").each(function() {
-          if ($(this).children("img").length) {
-            imagesCollection.push($(this).children("img"));
-          }
-        });
-      } else {
-        $(".item-column").each(function() {
-          if (
-            $(this)
-              .children("img")
-              .data("gallery-tag") === activeTag
-          ) {
-            imagesCollection.push($(this).children("img"));
-          }
-        });
-      }
-      let index = 0,
-        next = null;
 
-      $(imagesCollection).each(function(i) {
-        if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i ;
-        }
-      });
-      next =
-        imagesCollection[index] ||
-        imagesCollection[imagesCollection.length - 1];
-      $(".lightboxImage").attr("src", $(next).attr("src"));
+      let imagesCollection = $("img.gallery-item:visible");
+  let index = imagesCollection.index(activeImage);
+  let prevIndex = (index - 1 + imagesCollection.length) % imagesCollection.length;
+
+  $(".lightboxImage").attr("src", $(imagesCollection[prevIndex]).attr("src"));
+
+      // let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
+      // let imagesCollection = [];
+      // if (activeTag === "all") {
+      //   $(".item-column").each(function() {
+      //     if ($(this).children("img").length) {
+      //       imagesCollection.push($(this).children("img"));
+      //     }
+      //   });
+      // } else {
+      //   $(".item-column").each(function() {
+      //     if (
+      //       $(this)
+      //         .children("img")
+      //         .data("gallery-tag") === activeTag
+      //     ) {
+      //       imagesCollection.push($(this).children("img"));
+      //     }
+      //   });
+      // }
+      // let index = 0,
+      //   next = null;
+
+      // $(imagesCollection).each(function(i) {
+      //   if ($(activeImage).attr("src") === $(this).attr("src")) {
+      //     index = i ;
+      //   }
+      // });
+      // next =
+      //   imagesCollection[index] ||
+      //   imagesCollection[imagesCollection.length - 1];
+      // $(".lightboxImage").attr("src", $(next).attr("src"));
     },
     nextImage() {
       let activeImage = null;
@@ -165,35 +172,42 @@
           activeImage = $(this);
         }
       });
-      let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
-      let imagesCollection = [];
-      if (activeTag === "all") {
-        $(".item-column").each(function() {
-          if ($(this).children("img").length) {
-            imagesCollection.push($(this).children("img"));
-          }
-        });
-      } else {
-        $(".item-column").each(function() {
-          if (
-            $(this)
-              .children("img")
-              .data("gallery-tag") === activeTag
-          ) {
-            imagesCollection.push($(this).children("img"));
-          }
-        });
-      }
-      let index = 0,
-        next = null;
 
-      $(imagesCollection).each(function(i) {
-        if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i;
-        }
-      });
-      next = imagesCollection[index] || imagesCollection[0];
-      $(".lightboxImage").attr("src", $(next).attr("src"));
+      let imagesCollection = $("img.gallery-item:visible");
+  let index = imagesCollection.index(activeImage);
+  let nextIndex = (index + 1) % imagesCollection.length;
+
+  $(".lightboxImage").attr("src", $(imagesCollection[nextIndex]).attr("src"));
+
+      // let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
+      // let imagesCollection = [];
+      // if (activeTag === "all") {
+      //   $(".item-column").each(function() {
+      //     if ($(this).children("img").length) {
+      //       imagesCollection.push($(this).children("img"));
+      //     }
+      //   });
+      // } else {
+      //   $(".item-column").each(function() {
+      //     if (
+      //       $(this)
+      //         .children("img")
+      //         .data("gallery-tag") === activeTag
+      //     ) {
+      //       imagesCollection.push($(this).children("img"));
+      //     }
+      //   });
+      // }
+      // let index = 0,
+      //   next = null;
+
+      // $(imagesCollection).each(function(i) {
+      //   if ($(activeImage).attr("src") === $(this).attr("src")) {
+      //     index = i;
+      //   }
+      // });
+      // next = imagesCollection[index] || imagesCollection[0];
+      // $(".lightboxImage").attr("src", $(next).attr("src"));
     },
     createLightBox(gallery, lightboxId, navigation) {
       gallery.append(`<div class="modal fade" id="${
@@ -240,7 +254,7 @@
         return;
       }
       $(".active-tag").removeClass("active active-tag");
-      $(this).addClass("active-tag");
+      $(this).addClass("active active-tag");
 
       var tag = $(this).data("images-toggle");
 
