@@ -1,17 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
+	<title>Nina Carducci</title>
+	<meta name="description" content="Nina Carducci photographe, sur mon site vous retouverez l'ensemblede mes projets ainsi que les services disponibles." />
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://nina-carducci.github.io/" />
+	<meta property="og:title" content="Nina Carducci, photographe" />
+	<meta property="og:description" content="Nina Carducci photographe, sur mon site vous retouverez l'ensemblede mes projets ainsi que les services disponibles." />
+	<meta property="og:image" content="assets/images/nina.webp"/>
+	<meta property="og:site_name" content="Nina Carducci">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Nina Carducci, photographe">
+	<meta name="twitter:description" content="Nina Carducci photographe, sur mon site vous retouverez l'ensemblede mes projets ainsi que les services disponibles.">
+	<meta name="twitter:image" content="assets/images/nina.webp">
+	<meta name="twitter:site" content="@NinaCarducci">
+	<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "LocalBusiness",
+		  "name": "Nina Carducci",
+		  "address": {
+			"@type": "PostalAddress",
+			"streetAddress": "68 avenue Alsace-Lorraine",
+			"addressLocality": "Bordeaux",
+			"postalCode": "33200",
+			"addressCountry": "FR"
+		  },
+		  "telephone": "05 56 67 78 89",
+		  "openingHours": "Mo-Fr 10:00-19:00",
+		  "image": "assets/images/nina.webp",
+		  "url": "https://nina-carducci.github.io/"
+		}
+		</script>
+	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" href="./assets/style.min.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
 	<meta charset="UTF-8">
-	<script src="./assets/bootstrap/bootstrap.bundle.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script src="./assets/maugallery.js"></script>
-	<script src="./assets/scripts.js"></script>
+	<script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
+	<script src="./assets/gallery.min.js" defer></script>
 </head>
 <body>
 <header>
@@ -43,7 +72,7 @@
 				<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp" class="d-block w-100" alt="Foule dans un concert" loading="lazy">
 			</div>
 			<div class="carousel-item">
-				<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp" class="d-block w-100" alt="Couple marié" loading="lazy">
+				<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.jpg" class="d-block w-100" alt="Couple marié" loading="lazy">
 			</div>
 		</div>
 		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -63,14 +92,14 @@
 		<img alt="Portrait de Nina Carducci" src="./assets/images/nina.webp">
 	</div>
 	<div id="about-me">
-		<h1 class="about-me__title">A propos de moi</h1>
-		<h6 class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</h6>
+		<h2 class="about-me__title">A propos de moi, Nina Carducci</h2>
+		<p class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</p>
 		<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
 			C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
 	</div>
 </div>
 <div id="gallery">
-	<h3 class="title">Portfolio</h3>
+	<h2 class="title">Portfolio</h2>
 	<div class="container py-3">
 		<div class="gallery" style="display: none">
 			<img data-gallery-tag="Concert" class="gallery-item" alt="Image d'un concert" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp">
@@ -81,20 +110,20 @@
 			<img data-gallery-tag="Mariages" class="gallery-item" alt="Photo d'un couple marié" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp">
 			<img data-gallery-tag="Portrait" class="gallery-item" alt="Portrait d'une femme" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.webp">
 			<img data-gallery-tag="Concert" class="gallery-item" alt="Photo d'un concert" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp">
-			<img data-gallery-tag="Entreprises" class="gallery-item" alt="Portrait d'une femme" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp">
+			<img data-gallery-tag="Entreprises" class="gallery-item" alt="Portrait d'une femme qui rigole" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp">
 		</div>
 	</div>
 	<div class="quote">
 		<figure>
 			<blockquote>
-				<h2 class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</h2>
+				<h3 class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</h3>
 			</blockquote>
 			<figcaption class="quote__author">- Richard Avedon</figcaption>
 		</figure>
 	</div>
 </div>
 <div id="services">
-	<h3 class="title">Mes services</h3>
+	<h2 class="title">Mes services</h2>
 	<div class="container">
 		<div class="service">
 			<div class="service__description">
@@ -132,7 +161,7 @@
 <div class="quote">
 	<figure>
 		<blockquote>
-			<h1 class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</h1>
+			<h3 class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</h3>
 		</blockquote>
 		<figcaption class="quote__author">- Richard Avedon</figcaption>
 	</figure>
@@ -142,14 +171,14 @@
 <div id="contact">
 	<div class="container">
 		<div class="form-container">
-			<h3>Une question ? Une demande de devis ?</h3>
+			<h2>Une question ? Une demande de devis ?</h2>
 			<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
 			<form action="" method="post">
-				<label>Nom</label>
+				<label for="nom">Nom</label>
 				<input type="text" name="nom" id="nom">
-				<label>Email</label>
+				<label for="email">Email</label>
 				<input type="email" name="email" id="email">
-				<label>Message</label>
+				<label for="message">Message</label>
 				<textarea name="message" id="message" cols="30" rows="10"></textarea>
 				<input type="submit" value="Envoyer"/>
 			</form>
